@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/b42b938b25.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="inputBox">
+                <i class="fa-sharp fa-solid fa-calendar-days fa-2xl" id="calendarIcon"></i>
+                <input id="inputEle" type="text" placeholder="Add to ToDo list">
+                <!-- <i class="fa-solid fa-plus fa-beat fa-xl" id="addIcon"></i>
+                 -->
+                 <button id="addButton" class="action">Add</button>
+            </div>
+            
+            <div id="listContainer">
+                <ul id="list" style="list-style-type: circle;">
+                    
+                </ul>
+                <ul id="completedTasksList" style="list-style-type: disc;">
+                    <!-- <li class="taskCompleted ">Raw design</li>
+                    <li class="taskCompleted ">Work on features</li> -->
+                </ul>        
+                <!-- <li type="circle" class="listItem">First Item</li>
+                <li type="circle" class="listItem">Second Item</li> -->
+            </div>
+
+            <button id="allTasks">All</button>
+            <button id="pendingTasks">Pending</button>
+            <button id="completedTasks">Completed</button>
+
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
