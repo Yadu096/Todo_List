@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        
+        <script src="https://kit.fontawesome.com/b42b938b25.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="inputBox">
+                <form action="/tasks/create" method="post">
+                    <i class="fa-sharp fa-solid fa-calendar-days fa-2xl" id="calendarIcon"></i>
+                    <input id="inputEle" type="text" name="description" placeholder="Add to ToDo list">
+                    <button id="addButton" class="action" type="submit">Add</button>
+                </form>
+                
+            </div>
+            
+            <div id="listContainer">
+                <ul id="pendingTasksList" >
+                    <% for(let task of pendingTasksList){%>
+                        <li>
+                            <%= task.description %>
+                            <a href="/tasks/mark-completed/?id=<%= task._id %>">
+                                <button type="submit">Mark Complete</button>
+                            </a>
+                        
+                            <a href="/tasks/delete/?id=<%= task._id %>">
+                                <button type="submit">Delete</button>
+                            </a>
+                            
+                        </li>
+                        
+                    <% } %>
+                    
+                </ul>
+                <ul id="completedTasksList" ">
+                    <% for(let task of completedTasksList){%>
+                        <li>
+                            <%= task.description %>
+                            <a href="/tasks/mark-incomplete/?id=<%= task._id %>">
+                                <button type="submit">Mark Incomplete</button>
+                            </a>
+
+                            <a href="/tasks/delete/?id=<%= task._id %>">
+                                <button type="submit">Delete</button>
+                            </a>
+                            
+                        </li>
+                        
+                    <% } %>
+                </ul>        
+                
+            </div>
+            
+            <button id="allTasks" type="submit">All</button>
+            <button id="pendingTasks" type="submit">Pending</button>
+            <button id="completedTasks" type="submit">Completed</button>
+            
+            
+            
+            
+
+        </div>
+        <script>
+            //Show all tasks 
+            document.getElementById("allTasks").addEventListener("click", showAllTasks);
+            function showAllTasks(){
+                document.getElementById("completedTasksList").style.display = "block";
+                document.getElementById("pendingTasksList").style.display = "block";
+            }
+
+            //Show pending tasks only
+            document.getElementById("pendingTasks").addEventListener("click", showPendingTasks);
+            function showPendingTasks(){
+                document.title = "Pending Tasks";
+                document.getElementById("completedTasksList").style.display = "none";
+                document.getElementById("pendingTasksList").style.display = "block";
+            }
+
+            //Show completed tasks only
+            document.getElementById("completedTasks").addEventListener("click", showCompletedTasks);
+            function showCompletedTasks(){
+                document.title = "Completed Tasks";
+                document.getElementById("completedTasksList").style.display = "block";
+                document.getElementById("pendingTasksList").style.display = "none";
+            }
+        </script>
+        <!-- <script type="text/javascript" src="/js/script.js"></script> -->
+    </body>
+</html>

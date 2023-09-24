@@ -1,0 +1,133 @@
+#container{
+    min-height: 400px;
+    height: fit-content;
+    width: 400px;
+    /* height: fit-content; */
+    /* border: 2px solid black; */
+    position: relative;
+    left: 37%;
+    top: 23%;
+    background-color:azure;
+    overflow: scroll;
+    border: groove;
+}
+
+#inputBox{
+    height: 50px;
+    width: 90%;
+    background-color: beige;
+    padding: 2px darkgrey;
+    margin: 20px auto;
+    border-radius: 2%;
+    border: groove;
+}
+
+#addIcon{
+    position: relative;
+    left: 5%;
+    top: 10%;
+    
+}
+
+#addButton{
+    height: 40px;
+    position: relative;
+    top: 8%;
+    left: 5%;
+}
+
+#inputEle{
+    height: 40px;
+    width: 70%;
+    background-color: beige;
+    border: none;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#calendarIcon{
+    position: relative;
+    top: 10%;
+    left: 2%;
+}
+  
+#listContainer{
+    min-height: 100px;
+    height:fit-content;
+    width: 90%;
+    background-color: beige;
+    margin: 0 auto;
+    border: groove;
+    transition: all 5s;
+    overflow:auto;
+}
+
+#completedTasks{
+    height: 40px;
+    margin: 20px 0px;
+    /* position: relative;
+    top: 20px;
+    left: 5%; */
+}
+
+#allTasks{
+    height: 40px;
+    margin: 20px 0px 0px 20px;
+}
+
+#pendingTasks{
+    height: 40px;
+    margin: 20px 0px;
+}
+
+#pendingTasksList{
+    list-style-type: circle;
+}
+
+#completedTasksList{
+    background-color: lightgreen;
+    list-style-type: disc;
+}
+
+.listItem{
+    position: relative;
+    left: 5px;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.taskCompleted{
+    background-color: lightgreen;
+    position: relative;
+    left: 5px;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#all_button_form{
+    display: inline;
+}
+
+#pending_button_form{
+    display: inline;
+}
+
+#completed_button_form{
+    display: inline;
+}
+
+.doneButton {
+    position: relative;
+    left: 60px;
+    top: -3px;
+}
+
+.removeButton{
+    position: relative;
+    left: 70px;
+    bottom: 3px;
+}
+
