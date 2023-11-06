@@ -6,7 +6,7 @@ module.exports.create = function(req, res){
     
     Tasks.create({
         description: req.body.description,
-        isCompleted: true
+        isCompleted: false
     }).then((newData)=>{
         console.log("***", newData);
         return res.redirect('back');
